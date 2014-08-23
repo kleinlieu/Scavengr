@@ -22,6 +22,10 @@
 		CE77A5CF19A925990093094E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE77A5AE19A925990093094E /* UIKit.framework */; };
 		CE77A5D719A925990093094E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE77A5D519A925990093094E /* InfoPlist.strings */; };
 		CE77A5D919A925990093094E /* ScavngrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE77A5D819A925990093094E /* ScavngrTests.m */; };
+		CE77A5E319A928AD0093094E /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE77A5E219A928AD0093094E /* libEstimoteSDK.a */; };
+		CE77A5E719A928FD0093094E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE77A5E419A928FD0093094E /* CoreBluetooth.framework */; };
+		CE77A5E819A928FD0093094E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE77A5E519A928FD0093094E /* CoreLocation.framework */; };
+		CE77A5E919A928FD0093094E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE77A5E619A928FD0093094E /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		CE77A5D419A925990093094E /* ScavngrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScavngrTests-Info.plist"; sourceTree = "<group>"; };
 		CE77A5D619A925990093094E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE77A5D819A925990093094E /* ScavngrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScavngrTests.m; sourceTree = "<group>"; };
+		CE77A5E219A928AD0093094E /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = EstimoteSDK/libEstimoteSDK.a; sourceTree = "<group>"; };
+		CE77A5E419A928FD0093094E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		CE77A5E519A928FD0093094E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CE77A5E619A928FD0093094E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE77A5E719A928FD0093094E /* CoreBluetooth.framework in Frameworks */,
+				CE77A5E819A928FD0093094E /* CoreLocation.framework in Frameworks */,
+				CE77A5E919A928FD0093094E /* SystemConfiguration.framework in Frameworks */,
+				CE77A5E319A928AD0093094E /* libEstimoteSDK.a in Frameworks */,
 				CE77A5AD19A925990093094E /* CoreGraphics.framework in Frameworks */,
 				CE77A5AF19A925990093094E /* UIKit.framework in Frameworks */,
 				CE77A5AB19A925990093094E /* Foundation.framework in Frameworks */,
@@ -103,6 +115,10 @@
 		CE77A5A919A925990093094E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE77A5E419A928FD0093094E /* CoreBluetooth.framework */,
+				CE77A5E519A928FD0093094E /* CoreLocation.framework */,
+				CE77A5E619A928FD0093094E /* SystemConfiguration.framework */,
+				CE77A5E219A928AD0093094E /* libEstimoteSDK.a */,
 				CE77A5AA19A925990093094E /* Foundation.framework */,
 				CE77A5AC19A925990093094E /* CoreGraphics.framework */,
 				CE77A5AE19A925990093094E /* UIKit.framework */,
@@ -392,7 +408,16 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Scavngr/Scavngr-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../EstimoteSDK/Headers",
+				);
 				INFOPLIST_FILE = "Scavngr/Scavngr-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EstimoteSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -405,7 +430,16 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Scavngr/Scavngr-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../EstimoteSDK/Headers",
+				);
 				INFOPLIST_FILE = "Scavngr/Scavngr-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EstimoteSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

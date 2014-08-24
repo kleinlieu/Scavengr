@@ -18,8 +18,15 @@
     NSArray *testValues;
     NSTimer *timer;
 }
+- (void)nextStep;
+- (void) itsTime:(NSTimer *) timer;
+- (void) userSwiped:(id)sender;
+- (void) userTapped:(id)sender;
+
 @property (atomic) NSArray *sortedNames;
 @property (strong, nonatomic) UISwipeGestureRecognizer *swipe;
+@property (strong, nonatomic) UITapGestureRecognizer *tap;
+
 @end
 
 
@@ -35,7 +42,7 @@ static NSString *CellIdentifier = @"ProgressCell";
         _updates = [NSMutableDictionary new];
         _sortedNames = [NSArray new];
         testValues = @[
-                                       @"Byron", @"5", @"Klein", @"5", @"Onno", @"1", @"Richard", @"1",
+                                       @"Byron", @"1", @"Klein", @"1", @"Onno", @"1", @"Richard", @"1",
                                        @"Byron", @"2", @"Klein", @"1", @"Onno", @"2", @"Richard", @"2",
                                        @"Byron", @"3", @"Klein", @"2", @"Onno", @"3", @"Richard", @"2",
                                        @"Byron", @"4", @"Klein", @"2", @"Onno", @"4", @"Richard", @"2",
@@ -58,23 +65,37 @@ static NSString *CellIdentifier = @"ProgressCell";
     _swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userSwiped:)];
     _swipe.direction = UISwipeGestureRecognizerDirectionLeft;
     _swipe.numberOfTouchesRequired = 2;
-    [self.tableView addGestureRecognizer:_swipe];
     
-    timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(itsTime:) userInfo:nil repeats:YES];
+    _tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userTapped:)];
+    [self.view addGestureRecognizer:_tap];
+    
+    [self.tableView addGestureRecognizer:_swipe];
+    [self.tableView addGestureRecognizer:_tap];
+
+    
+    timer = [NSTimer scheduledTimerWithTimeInterval:20 target:self selector:@selector(itsTime:) userInfo:nil repeats:YES];
 }
 
-- (void) itsTime: (NSTimer *) timer {
+
+- (void)nextStep {
     static NSUInteger count  = 0;
     
     float d = [[testValues objectAtIndex:count+1] floatValue] / 5.0f;
     [self updateStatus:[testValues objectAtIndex:count]
               distance:d];
     count =  (count + 2) % [testValues count];
-    
+}
+
+- (void) itsTime:(NSTimer *) timer {
+    [self nextStep];
 }
 
 - (void) userSwiped:(id)sender {
     [_delegate didFinish:self];
+}
+
+- (void) userTapped:(id)sender {
+    [self nextStep];
 }
 
 - (void)didReceiveMemoryWarning

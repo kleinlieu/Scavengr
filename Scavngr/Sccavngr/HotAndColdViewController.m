@@ -176,7 +176,7 @@ static int kStartTime = 3;
                          _countdownLabel.alpha = 1;
                      } completion:nil];
 
-    NSLog(@"View Controller's Distance: %d", distance);
+    NSLog(@"View Controller's Distance: %d", (int)distance);
 
     switch (distance) {
         case PlayerIsCold:

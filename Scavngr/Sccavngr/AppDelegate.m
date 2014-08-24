@@ -7,12 +7,20 @@
 //
 
 #import "AppDelegate.h"
+#import "ProgressVC.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    UIViewController* viewController = nil;
+    
+    self.window.rootViewController = [[ProgressVC alloc] init];
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 							

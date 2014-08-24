@@ -32,6 +32,23 @@
 		CE51902E19A93F2C002BF6C6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE51902C19A93F2C002BF6C6 /* SystemConfiguration.framework */; };
 		CE51903119A945A7002BF6C6 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE51903019A945A7002BF6C6 /* TableViewCell.m */; };
 		CE51903419A9ADBD002BF6C6 /* BeaconEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = CE51903319A9ADBD002BF6C6 /* BeaconEngine.m */; };
+		CE51904619A9B6D7002BF6C6 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51903619A9B6D7002BF6C6 /* AppIcon29x29.png */; };
+		CE51904719A9B6D7002BF6C6 /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51903719A9B6D7002BF6C6 /* AppIcon29x29@2x.png */; };
+		CE51904819A9B6D7002BF6C6 /* AppIcon40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51903819A9B6D7002BF6C6 /* AppIcon40x40.png */; };
+		CE51904919A9B6D7002BF6C6 /* AppIcon40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51903919A9B6D7002BF6C6 /* AppIcon40x40@2x.png */; };
+		CE51904A19A9B6D7002BF6C6 /* AppIcon50x50.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51903A19A9B6D7002BF6C6 /* AppIcon50x50.png */; };
+		CE51904B19A9B6D7002BF6C6 /* AppIcon50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51903B19A9B6D7002BF6C6 /* AppIcon50x50@2x.png */; };
+		CE51904C19A9B6D7002BF6C6 /* AppIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51903C19A9B6D7002BF6C6 /* AppIcon57x57.png */; };
+		CE51904D19A9B6D7002BF6C6 /* AppIcon57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51903D19A9B6D7002BF6C6 /* AppIcon57x57@2x.png */; };
+		CE51904E19A9B6D7002BF6C6 /* AppIcon60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51903E19A9B6D7002BF6C6 /* AppIcon60x60.png */; };
+		CE51904F19A9B6D7002BF6C6 /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51903F19A9B6D7002BF6C6 /* AppIcon60x60@2x.png */; };
+		CE51905019A9B6D7002BF6C6 /* AppIcon72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51904019A9B6D7002BF6C6 /* AppIcon72x72.png */; };
+		CE51905119A9B6D7002BF6C6 /* AppIcon72x72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51904119A9B6D7002BF6C6 /* AppIcon72x72@2x.png */; };
+		CE51905219A9B6D7002BF6C6 /* AppIcon76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51904219A9B6D7002BF6C6 /* AppIcon76x76.png */; };
+		CE51905319A9B6D7002BF6C6 /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51904319A9B6D7002BF6C6 /* AppIcon76x76@2x.png */; };
+		CE51905419A9B6D7002BF6C6 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51904419A9B6D7002BF6C6 /* iTunesArtwork.png */; };
+		CE51905519A9B6D7002BF6C6 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51904519A9B6D7002BF6C6 /* iTunesArtwork@2x.png */; };
+		CE51905719A9B7D9002BF6C6 /* AppIcon120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51905619A9B7D9002BF6C6 /* AppIcon120x120.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +98,23 @@
 		CE51903019A945A7002BF6C6 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		CE51903219A9ADBD002BF6C6 /* BeaconEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconEngine.h; sourceTree = "<group>"; };
 		CE51903319A9ADBD002BF6C6 /* BeaconEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconEngine.m; sourceTree = "<group>"; };
+		CE51903619A9B6D7002BF6C6 /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
+		CE51903719A9B6D7002BF6C6 /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
+		CE51903819A9B6D7002BF6C6 /* AppIcon40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon40x40.png; sourceTree = "<group>"; };
+		CE51903919A9B6D7002BF6C6 /* AppIcon40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@2x.png"; sourceTree = "<group>"; };
+		CE51903A19A9B6D7002BF6C6 /* AppIcon50x50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon50x50.png; sourceTree = "<group>"; };
+		CE51903B19A9B6D7002BF6C6 /* AppIcon50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon50x50@2x.png"; sourceTree = "<group>"; };
+		CE51903C19A9B6D7002BF6C6 /* AppIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon57x57.png; sourceTree = "<group>"; };
+		CE51903D19A9B6D7002BF6C6 /* AppIcon57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon57x57@2x.png"; sourceTree = "<group>"; };
+		CE51903E19A9B6D7002BF6C6 /* AppIcon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon60x60.png; sourceTree = "<group>"; };
+		CE51903F19A9B6D7002BF6C6 /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
+		CE51904019A9B6D7002BF6C6 /* AppIcon72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon72x72.png; sourceTree = "<group>"; };
+		CE51904119A9B6D7002BF6C6 /* AppIcon72x72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon72x72@2x.png"; sourceTree = "<group>"; };
+		CE51904219A9B6D7002BF6C6 /* AppIcon76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon76x76.png; sourceTree = "<group>"; };
+		CE51904319A9B6D7002BF6C6 /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
+		CE51904419A9B6D7002BF6C6 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		CE51904519A9B6D7002BF6C6 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		CE51905619A9B7D9002BF6C6 /* AppIcon120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon120x120.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +219,7 @@
 		CE518FF919A93E27002BF6C6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE51903519A9B6B9002BF6C6 /* Images */,
 				CE518FFA19A93E27002BF6C6 /* Sccavngr-Info.plist */,
 				CE518FFB19A93E27002BF6C6 /* InfoPlist.strings */,
 				CE518FFE19A93E27002BF6C6 /* main.m */,
@@ -209,6 +244,30 @@
 				CE51901A19A93E27002BF6C6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE51903519A9B6B9002BF6C6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CE51903619A9B6D7002BF6C6 /* AppIcon29x29.png */,
+				CE51903719A9B6D7002BF6C6 /* AppIcon29x29@2x.png */,
+				CE51903819A9B6D7002BF6C6 /* AppIcon40x40.png */,
+				CE51903919A9B6D7002BF6C6 /* AppIcon40x40@2x.png */,
+				CE51903A19A9B6D7002BF6C6 /* AppIcon50x50.png */,
+				CE51903B19A9B6D7002BF6C6 /* AppIcon50x50@2x.png */,
+				CE51903C19A9B6D7002BF6C6 /* AppIcon57x57.png */,
+				CE51903D19A9B6D7002BF6C6 /* AppIcon57x57@2x.png */,
+				CE51903E19A9B6D7002BF6C6 /* AppIcon60x60.png */,
+				CE51903F19A9B6D7002BF6C6 /* AppIcon60x60@2x.png */,
+				CE51904019A9B6D7002BF6C6 /* AppIcon72x72.png */,
+				CE51904119A9B6D7002BF6C6 /* AppIcon72x72@2x.png */,
+				CE51904219A9B6D7002BF6C6 /* AppIcon76x76.png */,
+				CE51904319A9B6D7002BF6C6 /* AppIcon76x76@2x.png */,
+				CE51905619A9B7D9002BF6C6 /* AppIcon120x120.png */,
+				CE51904419A9B6D7002BF6C6 /* iTunesArtwork.png */,
+				CE51904519A9B6D7002BF6C6 /* iTunesArtwork@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,8 +356,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE51900B19A93E27002BF6C6 /* Images.xcassets in Resources */,
+				CE51904E19A9B6D7002BF6C6 /* AppIcon60x60.png in Resources */,
+				CE51904819A9B6D7002BF6C6 /* AppIcon40x40.png in Resources */,
+				CE51904919A9B6D7002BF6C6 /* AppIcon40x40@2x.png in Resources */,
+				CE51904719A9B6D7002BF6C6 /* AppIcon29x29@2x.png in Resources */,
 				CE518FFD19A93E27002BF6C6 /* InfoPlist.strings in Resources */,
+				CE51905419A9B6D7002BF6C6 /* iTunesArtwork.png in Resources */,
+				CE51904B19A9B6D7002BF6C6 /* AppIcon50x50@2x.png in Resources */,
 				CE51900619A93E27002BF6C6 /* Main.storyboard in Resources */,
+				CE51904C19A9B6D7002BF6C6 /* AppIcon57x57.png in Resources */,
+				CE51904619A9B6D7002BF6C6 /* AppIcon29x29.png in Resources */,
+				CE51904F19A9B6D7002BF6C6 /* AppIcon60x60@2x.png in Resources */,
+				CE51904D19A9B6D7002BF6C6 /* AppIcon57x57@2x.png in Resources */,
+				CE51905719A9B7D9002BF6C6 /* AppIcon120x120.png in Resources */,
+				CE51905519A9B6D7002BF6C6 /* iTunesArtwork@2x.png in Resources */,
+				CE51904A19A9B6D7002BF6C6 /* AppIcon50x50.png in Resources */,
+				CE51905019A9B6D7002BF6C6 /* AppIcon72x72.png in Resources */,
+				CE51905119A9B6D7002BF6C6 /* AppIcon72x72@2x.png in Resources */,
+				CE51905319A9B6D7002BF6C6 /* AppIcon76x76@2x.png in Resources */,
+				CE51905219A9B6D7002BF6C6 /* AppIcon76x76.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,7 +557,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C3AC438B9B024EAFBED8BBC8 /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sccavngr/Sccavngr-Prefix.pch";
@@ -504,7 +579,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C3AC438B9B024EAFBED8BBC8 /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sccavngr/Sccavngr-Prefix.pch";

@@ -12,6 +12,7 @@
 
 #pragma mark - ESTBeaconManager delegate
 
+static const NSInteger kSamplingSize = 2;
 
 - (void)setup {
     /*
@@ -79,6 +80,7 @@
                 [_delegate playerDistanceToBeacon:beaconNumber+1 withDistance:PlayerHasArrived];
             }else{
                 PlayerHotAndColdDistance p = [self distanceIndicator:[beacon.distance floatValue]];
+
                 if (p != PlayerIsUnKnown) {
                     [_delegate playerDistanceToBeacon:beaconNumber+1 withDistance:p];
                 }
@@ -89,36 +91,61 @@
 
 #pragma mark -
 - (PlayerHotAndColdDistance)distanceIndicator:(CGFloat)distance {
-    if (distance < 0.10) {
-        return PlayerHasArrived;
+
+    if(distance < 0) {
+        return PlayerIsUnKnown;
     }
-    if (distance >= 25.0) {
-        return PlayerIsColdColdColdCold;
+
+    if (!_sampling) {
+        _sampling = [NSMutableArray new];
+    } else {
+        if (distance > 0) {
+            NSLog(@"Distance: %f", distance);
+            [_sampling addObject:[NSNumber numberWithFloat:distance]];
+        }
     }
-    if (distance >= 21.0) {
-        return PlayerIsColdColdCold;
+
+    if ([_sampling count] > kSamplingSize) {
+
+        CGFloat distance = 0.0;
+
+        for (int i = [_sampling count] - 1; i > [_sampling count] - kSamplingSize; i--) {
+            distance += [[_sampling objectAtIndex:i] floatValue];
+        }
+        distance = distance / kSamplingSize;
+
+        if (0 < distance < 0.05) {
+            return PlayerHasArrived;
+        }
+        if (distance >= 15.0) {
+            return PlayerIsColdColdColdCold;
+        }
+        if (distance >= 11.0) {
+            return PlayerIsColdColdCold;
+        }
+        if (distance >= 7.0) {
+            return PlayerIsColdCold;
+        }
+        if (distance >= 3.0) {
+            return PlayerIsCold;
+        }
+        if (distance >= 1.0) {
+            return PlayerIsNeutral;
+        }
+        if (distance >= 0.5) {
+            return PlayerIsHot;
+        }
+        if (distance >= 0.25) {
+            return PlayerIsHotHot;
+        }
+        if (distance >= 0.1) {
+            return PlayerIsHotHotHot;
+        }
+        if (distance >= 0.05) {
+            return PlayerIsHotHotHotHot;
+        }
     }
-    if (distance >= 17.0) {
-        return PlayerIsColdCold;
-    }
-    if (distance >= 13.0) {
-        return PlayerIsCold;
-    }
-    if (distance >= 9.0) {
-        return PlayerIsNeutral;
-    }
-    if (distance >= 5.0) {
-        return PlayerIsHot;
-    }
-    if (distance >= 2.0) {
-        return PlayerIsHotHot;
-    }
-    if (distance >= 0.7) {
-        return PlayerIsHotHotHot;
-    }
-    if (distance >= 0.1) {
-        return PlayerIsHotHotHotHot;
-    }
+
     return PlayerIsUnKnown;
 }
 

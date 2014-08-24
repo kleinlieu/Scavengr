@@ -40,7 +40,7 @@ typedef NS_ENUM(NSInteger, PlayerHotAndColdDistance) {
 @property (nonatomic, strong) ESTBeacon         *beacon;
 @property (nonatomic, strong) ESTBeaconManager  *beaconManager;
 @property (nonatomic, strong) ESTBeaconRegion   *beaconRegion;
-
+@property (nonatomic, strong) NSMutableArray    *sampling; 
 @property (nonatomic, strong) NSArray *ourBeacons;
 
 - (void)setup;

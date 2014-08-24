@@ -17,16 +17,16 @@ static NSString *kTwoSecondBackgroundColor = @"ffa68f";
 static NSString *kOneSecondBackgroundColor = @"83B8EB";
 static NSString *kGoBackgroundColor = @"1187B2";
 static NSString *kCountdownTextColor = @"ffffff";
-static NSString *kPlayerHasArrived = @"ffffff";
+static NSString *kPlayerHasArrived = @"45F269";
 static NSString *kPlayerIsHotHotHotHot = @"B22139";
 static NSString *kPlayerIsHotHotHot = @"FF4867";
 static NSString *kPlayerIsHotHot = @"FF617C";
-static NSString *kPlayerIsHot = @"FFB1BA";
-static NSString *kPlayerIsNeutral = @"45F269";
-static NSString *kPlayerIsCold = @"B5D1EB";
-static NSString *kPlayerIsColdCold = @"83B8EB";
-static NSString *kPlayerIsColdColdCold = @"1187B2";
-static NSString *kPlayerIsColdColdColdCold = @"1187B2";
+static NSString *kPlayerIsHot = @"FF97A2";
+static NSString *kPlayerIsNeutral = @"f8b6bd";
+static NSString *kPlayerIsCold = @"fbced3";
+static NSString *kPlayerIsColdCold = @"fce1e4";
+static NSString *kPlayerIsColdColdCold = @"faeff0";
+static NSString *kPlayerIsColdColdColdCold = @"FFF8F8";
 
 static NSString *kStartWord = @"Go!";
 static int kStartTime = 3;
@@ -35,6 +35,7 @@ static int kStartTime = 3;
 
 @property (strong, nonatomic) UIActivityIndicatorView *loadingIndicator;
 @property (strong, nonatomic) UILabel *countdownLabel;
+@property (strong, nonatomic) UILabel *distanceDebug;
 @property (strong, nonatomic) NSTimer *countdownTimer;
 @property (strong, nonatomic) NSArray *countdownColors;
 @property int countdownValue;
@@ -42,7 +43,7 @@ static int kStartTime = 3;
 @property (retain, nonatomic) NSMutableArray *transcripts;
 @property (strong, nonatomic) UITapGestureRecognizer *tap;
 @property (strong, nonatomic) UISwipeGestureRecognizer *swipe;
-
+@property (strong, nonatomic) NSMutableArray *sampling;
 @end
 
 @implementation HotAndColdViewController
@@ -153,6 +154,7 @@ static int kStartTime = 3;
 
 - (void)startHotAndColdView
 {
+    [_loadingIndicator startAnimating];
     [_beaconEngine setup];
 
     [UIView animateWithDuration:0.5 delay:0.5 options:UIViewAnimationOptionCurveEaseOut
@@ -164,7 +166,9 @@ static int kStartTime = 3;
 
 - (void)playerDistanceToBeacon:(int)number withDistance:(PlayerHotAndColdDistance)distance {
     NSString *currentBackgroundColor;
-    
+
+    if ([_loadingIndicator isAnimating])
+        [_loadingIndicator stopAnimating];
     _countdownLabel.text = [NSString stringWithFormat:@"Beacon %d", number++];
 
     [UIView animateWithDuration:0.5 delay:0.5 options:UIViewAnimationOptionCurveEaseOut
@@ -172,7 +176,8 @@ static int kStartTime = 3;
                          _countdownLabel.alpha = 1;
                      } completion:nil];
 
-    NSLog(@"%ld", distance);
+    NSLog(@"View Controller's Distance: %d", distance);
+
     switch (distance) {
         case PlayerIsCold:
             currentBackgroundColor = kPlayerIsCold;
@@ -199,15 +204,18 @@ static int kStartTime = 3;
             currentBackgroundColor = kPlayerIsHotHotHotHot;
             break;
         case PlayerHasArrived:
-            currentBackgroundColor = kPlayerHasArrived;
-        default:
             currentBackgroundColor = kPlayerIsNeutral;
+        default:
             break;
     }
-    
-    [UIView animateWithDuration:0.5 animations:^{
-        self.view.backgroundColor = [UIColor colorWithHexString:currentBackgroundColor];
-    }];
+
+    NSLog(@"Current background color: %@", currentBackgroundColor);
+
+    if (currentBackgroundColor) {
+        [UIView animateWithDuration:0.5 animations:^{
+            self.view.backgroundColor = [UIColor colorWithHexString:currentBackgroundColor];
+        }];
+    }
 }
 
 

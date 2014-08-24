@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "ProgressHeaderView.h"
+#import "HotAndColdViewController.h"
 
 @interface ProgressVC : UITableViewController
 
 @property (strong) ProgressHeaderView IBOutlet *progressHeader;
 @property (strong) NSMutableDictionary *updates;
+@property (strong) NSObject<DialogFinished> *delegate;
 
 
 @end

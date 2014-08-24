@@ -8,6 +8,7 @@
 
 #import "HotAndColdViewController.h"
 #import "SessionContainer.h"
+#import "ProgressVC.h"
 #import <HexColors/HexColor.h>
 
 static NSString *kDefaultBackgroundColor = @"fff9c8";
@@ -40,6 +41,7 @@ static int kStartTime = 3;
 @property (retain, nonatomic) SessionContainer *sessionContainer;
 @property (retain, nonatomic) NSMutableArray *transcripts;
 @property (strong, nonatomic) UITapGestureRecognizer *tap;
+@property (strong, nonatomic) UISwipeGestureRecognizer *swipe;
 
 @end
 
@@ -69,6 +71,10 @@ static int kStartTime = 3;
 
     _tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userTapped:)];
     [self.view addGestureRecognizer:_tap];
+    _swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userSwiped:)];
+    _swipe.direction = UISwipeGestureRecognizerDirectionRight;
+    _swipe.numberOfTouchesRequired = 2;
+    [self.view addGestureRecognizer:_swipe];
 
     _beaconEngine = [[BeaconEngine alloc] init];
     _beaconEngine.delegate = self;
@@ -91,6 +97,19 @@ static int kStartTime = 3;
     // Send the message
     [self.sessionContainer sendMessage:@"hahahha"];
 
+}
+
+
+-  (void)userSwiped:(id)sender {
+    ProgressVC *progressVC = [[ProgressVC alloc] initWithNibName:nil bundle:nil];
+    progressVC.delegate = self;
+    [self presentViewController:progressVC animated:YES completion:^{
+        
+    }];
+}
+
+- (void)didFinish:(UIViewController *) viewController {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)startGame

@@ -11,12 +11,15 @@
 #import "ProgressHeaderView.h"
 #import "ProgressUpdate.h"
 
+#import "HotAndColdViewController.h"
+
 @interface ProgressVC ()
 {
     NSArray *testValues;
     NSTimer *timer;
 }
 @property (atomic) NSArray *sortedNames;
+@property (strong, nonatomic) UISwipeGestureRecognizer *swipe;
 @end
 
 
@@ -51,6 +54,12 @@ static NSString *CellIdentifier = @"ProgressCell";
     UIView *newBackgroundView = [UIView new];
     newBackgroundView.backgroundColor = _progressHeader.backgroundColor = [UIColor grayColor];
     self.tableView.backgroundView = newBackgroundView;
+    
+    _swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userSwiped:)];
+    _swipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    _swipe.numberOfTouchesRequired = 2;
+    [self.tableView addGestureRecognizer:_swipe];
+    
     timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(itsTime:) userInfo:nil repeats:YES];
 }
 
@@ -62,6 +71,10 @@ static NSString *CellIdentifier = @"ProgressCell";
               distance:d];
     count =  (count + 2) % [testValues count];
     
+}
+
+- (void) userSwiped:(id)sender {
+    [_delegate didFinish:self];
 }
 
 - (void)didReceiveMemoryWarning

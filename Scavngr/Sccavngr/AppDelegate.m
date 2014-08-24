@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ProgressVC.h"
+#import "HotAndColdViewController.h"
 
 @implementation AppDelegate
 
@@ -15,9 +16,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    UIViewController* viewController = nil;
+    UIViewController* viewController = [[HotAndColdViewController alloc] initWithNibName:nil bundle:nil];
     
-    self.window.rootViewController = [[ProgressVC alloc] init];
+//    self.window.rootViewController = [[ProgressVC alloc] init];
+    self.window.rootViewController = viewController;
     
     [self.window makeKeyAndVisible];
     

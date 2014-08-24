@@ -48,6 +48,9 @@
 		CE51905419A9B6D7002BF6C6 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51904419A9B6D7002BF6C6 /* iTunesArtwork.png */; };
 		CE51905519A9B6D7002BF6C6 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51904519A9B6D7002BF6C6 /* iTunesArtwork@2x.png */; };
 		CE51905719A9B7D9002BF6C6 /* AppIcon120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51905619A9B7D9002BF6C6 /* AppIcon120x120.png */; };
+		CE5190A219A9CA64002BF6C6 /* AppIcon80x80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5190A119A9CA64002BF6C6 /* AppIcon80x80@2x.png */; };
+		CE5190A419A9CA92002BF6C6 /* AppIcon58x58@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5190A319A9CA92002BF6C6 /* AppIcon58x58@2x.png */; };
+		CE5190A619A9CAE6002BF6C6 /* AppIcon58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5190A519A9CAE6002BF6C6 /* AppIcon58x58.png */; };
 		D70D23D019A9A4600072127F /* ProgressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70D23C519A9A4600072127F /* ProgressVC.m */; };
 		D70D23D119A9A4600072127F /* ProgressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D70D23C619A9A4600072127F /* ProgressCell.m */; };
 		D70D23D219A9A4600072127F /* ProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70D23C719A9A4600072127F /* ProgressCell.xib */; };
@@ -122,6 +125,9 @@
 		CE51904419A9B6D7002BF6C6 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		CE51904519A9B6D7002BF6C6 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		CE51905619A9B7D9002BF6C6 /* AppIcon120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon120x120.png; sourceTree = "<group>"; };
+		CE5190A119A9CA64002BF6C6 /* AppIcon80x80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon80x80@2x.png"; sourceTree = "<group>"; };
+		CE5190A319A9CA92002BF6C6 /* AppIcon58x58@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon58x58@2x.png"; sourceTree = "<group>"; };
+		CE5190A519A9CAE6002BF6C6 /* AppIcon58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon58x58.png; sourceTree = "<group>"; };
 		D70D23C519A9A4600072127F /* ProgressVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressVC.m; sourceTree = "<group>"; };
 		D70D23C619A9A4600072127F /* ProgressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressCell.m; sourceTree = "<group>"; };
 		D70D23C719A9A4600072127F /* ProgressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressCell.xib; sourceTree = "<group>"; };
@@ -290,6 +296,9 @@
 				CE51903F19A9B6D7002BF6C6 /* AppIcon60x60@2x.png */,
 				CE51904019A9B6D7002BF6C6 /* AppIcon72x72.png */,
 				CE51904119A9B6D7002BF6C6 /* AppIcon72x72@2x.png */,
+				CE5190A519A9CAE6002BF6C6 /* AppIcon58x58.png */,
+				CE5190A119A9CA64002BF6C6 /* AppIcon80x80@2x.png */,
+				CE5190A319A9CA92002BF6C6 /* AppIcon58x58@2x.png */,
 				CE51904219A9B6D7002BF6C6 /* AppIcon76x76.png */,
 				CE51904319A9B6D7002BF6C6 /* AppIcon76x76@2x.png */,
 				CE51905619A9B7D9002BF6C6 /* AppIcon120x120.png */,
@@ -388,8 +397,10 @@
 				CE51904E19A9B6D7002BF6C6 /* AppIcon60x60.png in Resources */,
 				CE51904819A9B6D7002BF6C6 /* AppIcon40x40.png in Resources */,
 				CE51904919A9B6D7002BF6C6 /* AppIcon40x40@2x.png in Resources */,
+				CE5190A419A9CA92002BF6C6 /* AppIcon58x58@2x.png in Resources */,
 				CE51904719A9B6D7002BF6C6 /* AppIcon29x29@2x.png in Resources */,
 				D742FC8E19A9C040009FBCE5 /* InfoPlist.strings in Resources */,
+				CE5190A619A9CAE6002BF6C6 /* AppIcon58x58.png in Resources */,
 				CE51905419A9B6D7002BF6C6 /* iTunesArtwork.png in Resources */,
 				CE51904B19A9B6D7002BF6C6 /* AppIcon50x50@2x.png in Resources */,
 				D70D23D319A9A4600072127F /* ProgressVC.xib in Resources */,
@@ -402,6 +413,7 @@
 				CE51904D19A9B6D7002BF6C6 /* AppIcon57x57@2x.png in Resources */,
 				CE51905719A9B7D9002BF6C6 /* AppIcon120x120.png in Resources */,
 				CE51905519A9B6D7002BF6C6 /* iTunesArtwork@2x.png in Resources */,
+				CE5190A219A9CA64002BF6C6 /* AppIcon80x80@2x.png in Resources */,
 				CE51904A19A9B6D7002BF6C6 /* AppIcon50x50.png in Resources */,
 				CE51905019A9B6D7002BF6C6 /* AppIcon72x72.png in Resources */,
 				CE51905119A9B6D7002BF6C6 /* AppIcon72x72@2x.png in Resources */,

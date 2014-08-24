@@ -74,11 +74,11 @@
                 }
             }
             if ([[dict objectForKey:@"found"] isEqualToString:@"Yes"]) {
-                [_delegate playerDistanceToBeacon:beaconNumber withDistance:PlayerHasArrived];
+                [_delegate playerDistanceToBeacon:beaconNumber+1 withDistance:PlayerHasArrived];
             }else{
                 PlayerHotAndColdDistance p = [self distanceIndicator:[beacon.distance floatValue]];
                 if (p != PlayerIsUnKnown) {
-                    [_delegate playerDistanceToBeacon:beaconNumber withDistance:p];
+                    [_delegate playerDistanceToBeacon:beaconNumber+1 withDistance:p];
                 }
             }
         }

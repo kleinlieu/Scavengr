@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>FD94C49C-3930-4571-9D30-29F0BCA76EC3</string>
+	<string>9CBBF790-8964-41F5-BDE2-E4F0EF1A2723</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Scavengr</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>7ECB09FC-2D4D-4FD1-8DE1-E844EB3C5D09</key>
-		<string>https://github.com/kleinlieu/Scavengr</string>
+		<key>15F1F857-1AFF-4F0D-ADA2-337D54C793B8</key>
+		<string>https://github.com/kleinlieu/Scavengr.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Scavngr/Scavengr.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>4BB5BFB3-605C-48EE-BE19-3AAACD8E7AF2</key>
+		<key>15F1F857-1AFF-4F0D-ADA2-337D54C793B8</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>4BB5BFB3-605C-48EE-BE19-3AAACD8E7AF2</string>
+	<string>15F1F857-1AFF-4F0D-ADA2-337D54C793B8</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>4BB5BFB3-605C-48EE-BE19-3AAACD8E7AF2</string>
+			<string>15F1F857-1AFF-4F0D-ADA2-337D54C793B8</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Scavengr</string>
 		</dict>

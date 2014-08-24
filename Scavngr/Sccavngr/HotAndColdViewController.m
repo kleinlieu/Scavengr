@@ -79,7 +79,10 @@ static int kStartTime = 3;
     _beaconEngine = [[BeaconEngine alloc] init];
     _beaconEngine.delegate = self;
     
-    [self createSession]; 
+    [self createSession];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ShowLoseMessage:) name:@"SomeoneWon" object:nil];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -151,12 +154,25 @@ static int kStartTime = 3;
 - (void)startHotAndColdView
 {
     [_beaconEngine setup];
+
+    [UIView animateWithDuration:0.5 delay:0.5 options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         _countdownLabel.alpha = 0;
+                     } completion:nil];
+
 }
 
 - (void)playerDistanceToBeacon:(int)number withDistance:(PlayerHotAndColdDistance)distance {
     NSString *currentBackgroundColor;
     
-    _countdownLabel.text = [NSString stringWithFormat:@"Beacon %d", number];
+    _countdownLabel.text = [NSString stringWithFormat:@"Beacon %d", number++];
+
+    [UIView animateWithDuration:0.5 delay:0.5 options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         _countdownLabel.alpha = 1;
+                     } completion:nil];
+
+    NSLog(@"%d", distance);
     switch (distance) {
         case PlayerIsCold:
             currentBackgroundColor = kPlayerIsCold;
@@ -189,7 +205,7 @@ static int kStartTime = 3;
             break;
     }
     
-    [UIView animateWithDuration:1.0 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
         self.view.backgroundColor = [UIColor colorWithHexString:currentBackgroundColor];
     }];
 }
@@ -211,6 +227,14 @@ static int kStartTime = 3;
     // Add to table view data source and update on main thread
     dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"%@", transcript.message);
+
+        if ([transcript.message isEqualToString:@"hahahha"]) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Disabled!!" message:[NSString stringWithFormat:@"%@ interrupted you!", transcript.peerID] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        } else if ([transcript.message isEqualToString:@"You lose"]) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"YOU LOSE" message:@"Better luck next time!" delegate:nil cancelButtonTitle:@"Play Again" otherButtonTitles:nil];
+            [alert show];
+        }
     });
 }
 
@@ -257,6 +281,11 @@ static int kStartTime = 3;
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)ShowLoseMessage:(id)sender
+{
+    [self.sessionContainer sendMessage:@"You lose"];
 }
 
 @end

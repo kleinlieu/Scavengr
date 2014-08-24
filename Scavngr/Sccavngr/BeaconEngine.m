@@ -49,6 +49,8 @@
         }
     }
     if (_foundAll) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"SomeoneWon" object:self];
+
         [self.beaconManager stopRangingBeaconsInRegion:self.beaconRegion];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"TADA TADA!!" message:@"Found them all!!!" delegate:nil cancelButtonTitle:@"Yay!" otherButtonTitles:nil];
         [alert show];

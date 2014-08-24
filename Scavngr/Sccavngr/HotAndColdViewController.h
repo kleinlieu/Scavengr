@@ -27,7 +27,7 @@ typedef NS_ENUM(NSInteger, PlayerHotAndColdDistance) {
 
 @end
 
-@interface HotAndColdViewController : HotAndColdUIViewController
+@interface HotAndColdViewController : UIViewController
 
 @property id<PlayerDistanceDelegate> delegate;
 

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08B0149119A99F630088F764 /* SessionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B0148C19A99F630088F764 /* SessionContainer.m */; };
+		08B0149219A99F630088F764 /* ProgressObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B0148E19A99F630088F764 /* ProgressObserver.m */; };
+		08B0149319A99F630088F764 /* Transcript.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B0149019A99F630088F764 /* Transcript.m */; };
+		08B0149619A99FC90088F764 /* HotAndColdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B0149419A99FC90088F764 /* HotAndColdViewController.m */; };
+		08B0149819A9A04D0088F764 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B0149719A9A04D0088F764 /* MultipeerConnectivity.framework */; };
+		A13BE50BBEC946369F4C5587 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3D2E6A08D84405A6F65471 /* libPods.a */; };
 		CE518FF319A93E27002BF6C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE518FF219A93E27002BF6C6 /* Foundation.framework */; };
 		CE518FF519A93E27002BF6C6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE518FF419A93E27002BF6C6 /* CoreGraphics.framework */; };
 		CE518FF719A93E27002BF6C6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE518FF619A93E27002BF6C6 /* UIKit.framework */; };
@@ -39,6 +45,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08B0148B19A99F630088F764 /* SessionContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionContainer.h; sourceTree = "<group>"; };
+		08B0148C19A99F630088F764 /* SessionContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionContainer.m; sourceTree = "<group>"; };
+		08B0148D19A99F630088F764 /* ProgressObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressObserver.h; sourceTree = "<group>"; };
+		08B0148E19A99F630088F764 /* ProgressObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressObserver.m; sourceTree = "<group>"; };
+		08B0148F19A99F630088F764 /* Transcript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transcript.h; sourceTree = "<group>"; };
+		08B0149019A99F630088F764 /* Transcript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transcript.m; sourceTree = "<group>"; };
+		08B0149419A99FC90088F764 /* HotAndColdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotAndColdViewController.m; sourceTree = "<group>"; };
+		08B0149519A99FC90088F764 /* HotAndColdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotAndColdViewController.h; sourceTree = "<group>"; };
+		08B0149719A9A04D0088F764 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		BA3D2E6A08D84405A6F65471 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3AC438B9B024EAFBED8BBC8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		CE518FEF19A93E27002BF6C6 /* Sccavngr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sccavngr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE518FF219A93E27002BF6C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE518FF419A93E27002BF6C6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -71,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08B0149819A9A04D0088F764 /* MultipeerConnectivity.framework in Frameworks */,
 				CE51902D19A93F2C002BF6C6 /* CoreLocation.framework in Frameworks */,
 				CE51902E19A93F2C002BF6C6 /* SystemConfiguration.framework in Frameworks */,
 				CE51902A19A93F20002BF6C6 /* CoreBluetooth.framework in Frameworks */,
@@ -78,6 +96,7 @@
 				CE518FF519A93E27002BF6C6 /* CoreGraphics.framework in Frameworks */,
 				CE518FF719A93E27002BF6C6 /* UIKit.framework in Frameworks */,
 				CE518FF319A93E27002BF6C6 /* Foundation.framework in Frameworks */,
+				A13BE50BBEC946369F4C5587 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +113,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08B0148A19A99F090088F764 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				08B0148B19A99F630088F764 /* SessionContainer.h */,
+				08B0148C19A99F630088F764 /* SessionContainer.m */,
+				08B0148D19A99F630088F764 /* ProgressObserver.h */,
+				08B0148E19A99F630088F764 /* ProgressObserver.m */,
+				08B0148F19A99F630088F764 /* Transcript.h */,
+				08B0149019A99F630088F764 /* Transcript.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		CE518FE619A93E27002BF6C6 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +133,7 @@
 				CE51901719A93E27002BF6C6 /* SccavngrTests */,
 				CE518FF119A93E27002BF6C6 /* Frameworks */,
 				CE518FF019A93E27002BF6C6 /* Products */,
+				C3AC438B9B024EAFBED8BBC8 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +149,7 @@
 		CE518FF119A93E27002BF6C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				08B0149719A9A04D0088F764 /* MultipeerConnectivity.framework */,
 				CE51902B19A93F2C002BF6C6 /* CoreLocation.framework */,
 				CE51902C19A93F2C002BF6C6 /* SystemConfiguration.framework */,
 				CE51902919A93F20002BF6C6 /* CoreBluetooth.framework */,
@@ -124,6 +158,7 @@
 				CE518FF419A93E27002BF6C6 /* CoreGraphics.framework */,
 				CE518FF619A93E27002BF6C6 /* UIKit.framework */,
 				CE51901119A93E27002BF6C6 /* XCTest.framework */,
+				BA3D2E6A08D84405A6F65471 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -131,8 +166,11 @@
 		CE518FF819A93E27002BF6C6 /* Sccavngr */ = {
 			isa = PBXGroup;
 			children = (
+				08B0148A19A99F090088F764 /* Models */,
 				CE51900119A93E27002BF6C6 /* AppDelegate.h */,
 				CE51900219A93E27002BF6C6 /* AppDelegate.m */,
+				08B0149419A99FC90088F764 /* HotAndColdViewController.m */,
+				08B0149519A99FC90088F764 /* HotAndColdViewController.h */,
 				CE51900419A93E27002BF6C6 /* Main.storyboard */,
 				CE51900719A93E27002BF6C6 /* ViewController.h */,
 				CE51900819A93E27002BF6C6 /* ViewController.m */,
@@ -180,9 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE51902119A93E27002BF6C6 /* Build configuration list for PBXNativeTarget "Sccavngr" */;
 			buildPhases = (
+				DB408FCB1F844EA09E0F47E4 /* Check Pods Manifest.lock */,
 				CE518FEB19A93E27002BF6C6 /* Sources */,
 				CE518FEC19A93E27002BF6C6 /* Frameworks */,
 				CE518FED19A93E27002BF6C6 /* Resources */,
+				F6785889F0D2485A9D0B4DDE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,6 +312,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DB408FCB1F844EA09E0F47E4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F6785889F0D2485A9D0B4DDE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE518FEB19A93E27002BF6C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -279,8 +352,12 @@
 			files = (
 				CE51900919A93E27002BF6C6 /* ViewController.m in Sources */,
 				CE51903119A945A7002BF6C6 /* TableViewCell.m in Sources */,
+				08B0149119A99F630088F764 /* SessionContainer.m in Sources */,
 				CE51900319A93E27002BF6C6 /* AppDelegate.m in Sources */,
+				08B0149619A99FC90088F764 /* HotAndColdViewController.m in Sources */,
+				08B0149219A99F630088F764 /* ProgressObserver.m in Sources */,
 				CE518FFF19A93E27002BF6C6 /* main.m in Sources */,
+				08B0149319A99F630088F764 /* Transcript.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +479,7 @@
 		};
 		CE51902219A93E27002BF6C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3AC438B9B024EAFBED8BBC8 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -424,6 +502,7 @@
 		};
 		CE51902319A93E27002BF6C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3AC438B9B024EAFBED8BBC8 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -503,6 +582,7 @@
 				CE51902319A93E27002BF6C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE51902419A93E27002BF6C6 /* Build configuration list for PBXNativeTarget "SccavngrTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +591,7 @@
 				CE51902619A93E27002BF6C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

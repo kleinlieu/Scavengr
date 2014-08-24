@@ -1,0 +1,2 @@
+pod 'HexColors', '~> 2.2.1'
+workspace 'Scavengr'

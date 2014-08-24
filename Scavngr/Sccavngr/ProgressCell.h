@@ -11,6 +11,7 @@
 @interface ProgressCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UIProgressView *progress;
+@property (weak, nonatomic) IBOutlet UIImageView *imageStatus;
 
 
 @end

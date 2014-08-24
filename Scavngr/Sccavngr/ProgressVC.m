@@ -35,7 +35,7 @@ static NSString *CellIdentifier = @"ProgressCell";
         _updates = [NSMutableDictionary new];
         _sortedNames = [NSArray new];
         testValues = @[
-                                       @"Byron", @"1", @"Klein", @"1", @"Onno", @"1", @"Richard", @"1",
+                                       @"Byron", @"5", @"Klein", @"5", @"Onno", @"1", @"Richard", @"1",
                                        @"Byron", @"2", @"Klein", @"1", @"Onno", @"2", @"Richard", @"2",
                                        @"Byron", @"3", @"Klein", @"2", @"Onno", @"3", @"Richard", @"2",
                                        @"Byron", @"4", @"Klein", @"2", @"Onno", @"4", @"Richard", @"2",
@@ -83,6 +83,10 @@ static NSString *CellIdentifier = @"ProgressCell";
     // Dispose of any resources that can be recreated.
 }
 
+-(void) dealloc {
+    [timer invalidate];
+}
+
 - (void) updateStatus:(NSString *)name distance:(float)distance {
     ProgressUpdate *pu  = [ProgressUpdate new];
     pu.playerName = name;
@@ -110,8 +114,14 @@ static NSString *CellIdentifier = @"ProgressCell";
     ProgressUpdate *pu = [_updates objectForKey:key];
     cell.name.text = pu.playerName;
     cell.progress.progress = pu.distance;
-    cell.backgroundView = [UIView new];
-    cell.backgroundView.backgroundColor = [UIColor clearColor];
+    if (pu.distance == 1.0f) {
+        cell.imageStatus.image = [UIImage imageNamed:@"smiley"];
+    }
+    else  {
+        cell.imageStatus.image = nil;
+    }
+//    cell.backgroundView = [UIView new];
+    cell.contentView.backgroundColor = [UIColor grayColor];
 
     return cell;
 }

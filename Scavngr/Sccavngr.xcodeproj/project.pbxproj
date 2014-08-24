@@ -224,17 +224,17 @@
 		CE518FF819A93E27002BF6C6 /* Sccavngr */ = {
 			isa = PBXGroup;
 			children = (
-				D70D23C519A9A4600072127F /* ProgressVC.m */,
+				D70D23CF19A9A4600072127F /* ProgressCell.h */,
 				D70D23C619A9A4600072127F /* ProgressCell.m */,
 				D70D23C719A9A4600072127F /* ProgressCell.xib */,
 				D70D23C819A9A4600072127F /* ProgressVC.xib */,
+				D70D23C519A9A4600072127F /* ProgressVC.m */,
 				D70D23C919A9A4600072127F /* ProgressVC.h */,
 				D70D23CA19A9A4600072127F /* ProgressUpdate.m */,
 				D70D23CB19A9A4600072127F /* ProgressUpdate.h */,
 				D70D23CC19A9A4600072127F /* ProgressHeaderView.xib */,
 				D70D23CD19A9A4600072127F /* ProgressHeaderView.h */,
 				D70D23CE19A9A4600072127F /* ProgressHeaderView.m */,
-				D70D23CF19A9A4600072127F /* ProgressCell.h */,
 				08B0148A19A99F090088F764 /* Models */,
 				CE51900119A93E27002BF6C6 /* AppDelegate.h */,
 				CE51900219A93E27002BF6C6 /* AppDelegate.m */,

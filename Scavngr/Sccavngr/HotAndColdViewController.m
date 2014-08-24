@@ -172,7 +172,7 @@ static int kStartTime = 3;
                          _countdownLabel.alpha = 1;
                      } completion:nil];
 
-    NSLog(@"%d", distance);
+    NSLog(@"%ld", distance);
     switch (distance) {
         case PlayerIsCold:
             currentBackgroundColor = kPlayerIsCold;

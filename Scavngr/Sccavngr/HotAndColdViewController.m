@@ -43,6 +43,7 @@ static int kStartTime = 3;
 @property (retain, nonatomic) NSMutableArray *transcripts;
 @property (strong, nonatomic) UITapGestureRecognizer *tap;
 @property (strong, nonatomic) UISwipeGestureRecognizer *swipe;
+@property (strong, nonatomic) UILongPressGestureRecognizer *longPress;
 @property (strong, nonatomic) NSMutableArray *sampling;
 @end
 
@@ -76,6 +77,9 @@ static int kStartTime = 3;
     _swipe.direction = UISwipeGestureRecognizerDirectionRight;
     _swipe.numberOfTouchesRequired = 2;
     [self.view addGestureRecognizer:_swipe];
+    _longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(userLongPress:)];
+    [self.view addGestureRecognizer:_longPress];
+
 
     _beaconEngine = [[BeaconEngine alloc] init];
     _beaconEngine.delegate = self;
@@ -94,6 +98,7 @@ static int kStartTime = 3;
     [self startGame];
 }
 
+
 - (void)userTapped:(id)sender
 {
     NSLog(@"User Tapped!");
@@ -103,6 +108,13 @@ static int kStartTime = 3;
 
 }
 
+
+
+- (void) userLongPress:(id)sender {
+    ProgressVC *progressVC = [[ProgressVC alloc] initWithNibName:nil bundle:nil];
+    progressVC.delegate = self;
+    [self presentViewController:progressVC animated:YES completion:nil];
+}	
 
 -  (void)userSwiped:(id)sender {
     ProgressVC *progressVC = [[ProgressVC alloc] initWithNibName:nil bundle:nil];

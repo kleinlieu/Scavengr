@@ -24,12 +24,11 @@
 - (void) userTapped:(id)sender;
 
 @property (atomic) NSArray *sortedNames;
+@property (strong, nonatomic) UILongPressGestureRecognizer *longPress;
 @property (strong, nonatomic) UISwipeGestureRecognizer *swipe;
 @property (strong, nonatomic) UITapGestureRecognizer *tap;
 
 @end
-
-
                                
 static NSString *CellIdentifier = @"ProgressCell";
 
@@ -69,7 +68,9 @@ static NSString *CellIdentifier = @"ProgressCell";
     _tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userTapped:)];
     [self.view addGestureRecognizer:_tap];
     
-    [self.tableView addGestureRecognizer:_swipe];
+    _longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(userLongPress:)];
+    [self.tableView addGestureRecognizer:_longPress];
+//    [self.tableView addGestureRecognizer:_swipe];
     [self.tableView addGestureRecognizer:_tap];
 
     
@@ -84,6 +85,11 @@ static NSString *CellIdentifier = @"ProgressCell";
     [self updateStatus:[testValues objectAtIndex:count]
               distance:d];
     count =  (count + 2) % [testValues count];
+}
+
+- (void) userLongPress:(id)sender {
+    NSLog(@"userLongPress:");
+    [_delegate didFinish:self];
 }
 
 - (void) itsTime:(NSTimer *) timer {

@@ -9,25 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "BeaconEngine.h"
 
-@interface HotAndColdViewController : UIViewController <PlayerDistanceDelegate>
-
-@property (strong, nonatomic) BeaconEngine *beaconEngine;
-@protocol PlayerDistanceDelegate <NSObject>
-
-- (void)playerDistanceToBeacon:(PlayerHotAndColdDistance)distance;
-
-@end
-
 @protocol DialogFinished <NSObject>
 - (void)didFinish:(UIViewController *) viewController;
 
 @end
 
-
-@interface HotAndColdViewController : UIViewController<DialogFinished>
+@interface HotAndColdViewController : UIViewController<DialogFinished, PlayerDistanceDelegate>
 
 @property id<PlayerDistanceDelegate> delegate;
-@property (strong, nonatomic) ViewController *onnoViewController;
+@property (strong, nonatomic) BeaconEngine *beaconEngine;
+
+//@property (strong, nonatomic) ViewController *onnoViewController;
 
 - (void)startGame;
 

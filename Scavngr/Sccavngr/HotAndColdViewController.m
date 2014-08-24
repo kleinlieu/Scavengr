@@ -155,17 +155,32 @@ static int kStartTime = 3;
 
 - (void)playerDistanceToBeacon:(int)number withDistance:(PlayerHotAndColdDistance)distance {
     NSString *currentBackgroundColor;
-
+    
     _countdownLabel.text = [NSString stringWithFormat:@"Beacon %d", number];
     switch (distance) {
         case PlayerIsCold:
             currentBackgroundColor = kPlayerIsCold;
             break;
+        case PlayerIsColdCold:
+            currentBackgroundColor = kPlayerIsColdCold;
+            break;
+        case PlayerIsColdColdCold:
+            currentBackgroundColor = kPlayerIsColdColdCold;
+            break;
         case PlayerIsColdColdColdCold:
             currentBackgroundColor = kPlayerIsColdColdColdCold;
             break;
+        case PlayerIsHot:
+            currentBackgroundColor = kPlayerIsHot;
+            break;
+        case PlayerIsHotHot:
+            currentBackgroundColor = kPlayerIsHotHot;
+            break;
         case PlayerIsHotHotHot:
             currentBackgroundColor = kPlayerIsHotHotHot;
+            break;
+        case PlayerIsHotHotHotHot:
+            currentBackgroundColor = kPlayerIsHotHotHotHot;
             break;
         case PlayerHasArrived:
             currentBackgroundColor = kPlayerHasArrived;
@@ -173,11 +188,12 @@ static int kStartTime = 3;
             currentBackgroundColor = kPlayerIsNeutral;
             break;
     }
-
+    
     [UIView animateWithDuration:1.0 animations:^{
         self.view.backgroundColor = [UIColor colorWithHexString:currentBackgroundColor];
     }];
 }
+
 
 - (void)createSession
 {

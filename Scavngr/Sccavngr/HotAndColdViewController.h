@@ -16,7 +16,6 @@
 
 @interface HotAndColdViewController : UIViewController<DialogFinished, PlayerDistanceDelegate>
 
-@property id<PlayerDistanceDelegate> delegate;
 @property (strong, nonatomic) BeaconEngine *beaconEngine;
 
 //@property (strong, nonatomic) ViewController *onnoViewController;

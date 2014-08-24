@@ -19,7 +19,8 @@ typedef NS_ENUM(NSInteger, PlayerHotAndColdDistance) {
     PlayerIsCold,
     PlayerIsColdCold,
     PlayerIsColdColdCold,
-    PlayerIsColdColdColdCold
+    PlayerIsColdColdColdCold,
+    PlayerIsUnKnown
 };
 
 

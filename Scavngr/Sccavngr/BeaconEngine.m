@@ -76,25 +76,48 @@
             if ([[dict objectForKey:@"found"] isEqualToString:@"Yes"]) {
                 [_delegate playerDistanceToBeacon:beaconNumber withDistance:PlayerHasArrived];
             }else{
-                [_delegate playerDistanceToBeacon:beaconNumber withDistance:[self distanceIndicator:beacon.proximity]];
+                PlayerHotAndColdDistance p = [self distanceIndicator:[beacon.distance floatValue]];
+                if (p != PlayerIsUnKnown) {
+                    [_delegate playerDistanceToBeacon:beaconNumber withDistance:p];
+                }
             }
         }
     }
 }
 
 #pragma mark -
-- (PlayerHotAndColdDistance)distanceIndicator:(CLProximity)proximity {
-    switch (proximity) {
-        case CLProximityUnknown:
-            return PlayerIsColdColdColdCold;
-        case CLProximityFar:
-            return PlayerIsCold;
-        case CLProximityNear:
-            return PlayerIsHotHotHot;
-        case CLProximityImmediate:
-            return PlayerIsHotHotHotHot;
+- (PlayerHotAndColdDistance)distanceIndicator:(CGFloat)distance {
+    if (distance < 0.10) {
+        return PlayerHasArrived;
     }
-    return PlayerIsNeutral;
+    if (distance >= 25.0) {
+        return PlayerIsColdColdColdCold;
+    }
+    if (distance >= 21.0) {
+        return PlayerIsColdColdCold;
+    }
+    if (distance >= 17.0) {
+        return PlayerIsColdCold;
+    }
+    if (distance >= 13.0) {
+        return PlayerIsCold;
+    }
+    if (distance >= 9.0) {
+        return PlayerIsNeutral;
+    }
+    if (distance >= 5.0) {
+        return PlayerIsHot;
+    }
+    if (distance >= 2.0) {
+        return PlayerIsHotHot;
+    }
+    if (distance >= 0.7) {
+        return PlayerIsHotHotHot;
+    }
+    if (distance >= 0.1) {
+        return PlayerIsHotHotHotHot;
+    }
+    return PlayerIsUnKnown;
 }
 
 - (NSString *)textForProximity:(CLProximity)proximity

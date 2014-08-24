@@ -20,7 +20,6 @@
 		CE518FFF19A93E27002BF6C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE518FFE19A93E27002BF6C6 /* main.m */; };
 		CE51900319A93E27002BF6C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE51900219A93E27002BF6C6 /* AppDelegate.m */; };
 		CE51900619A93E27002BF6C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE51900419A93E27002BF6C6 /* Main.storyboard */; };
-		CE51900919A93E27002BF6C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE51900819A93E27002BF6C6 /* ViewController.m */; };
 		CE51900B19A93E27002BF6C6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE51900A19A93E27002BF6C6 /* Images.xcassets */; };
 		CE51901219A93E27002BF6C6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE51901119A93E27002BF6C6 /* XCTest.framework */; };
 		CE51901319A93E27002BF6C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE518FF219A93E27002BF6C6 /* Foundation.framework */; };
@@ -32,6 +31,7 @@
 		CE51902D19A93F2C002BF6C6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE51902B19A93F2C002BF6C6 /* CoreLocation.framework */; };
 		CE51902E19A93F2C002BF6C6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE51902C19A93F2C002BF6C6 /* SystemConfiguration.framework */; };
 		CE51903119A945A7002BF6C6 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE51903019A945A7002BF6C6 /* TableViewCell.m */; };
+		CE51903419A9ADBD002BF6C6 /* BeaconEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = CE51903319A9ADBD002BF6C6 /* BeaconEngine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +67,6 @@
 		CE51900119A93E27002BF6C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE51900219A93E27002BF6C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CE51900519A93E27002BF6C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CE51900719A93E27002BF6C6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CE51900819A93E27002BF6C6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CE51900A19A93E27002BF6C6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CE51901019A93E27002BF6C6 /* SccavngrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SccavngrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE51901119A93E27002BF6C6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -81,6 +79,8 @@
 		CE51902C19A93F2C002BF6C6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CE51902F19A945A7002BF6C6 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		CE51903019A945A7002BF6C6 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		CE51903219A9ADBD002BF6C6 /* BeaconEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconEngine.h; sourceTree = "<group>"; };
+		CE51903319A9ADBD002BF6C6 /* BeaconEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconEngine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,8 +172,8 @@
 				08B0149519A99FC90088F764 /* HotAndColdViewController.h */,
 				08B0149419A99FC90088F764 /* HotAndColdViewController.m */,
 				CE51900419A93E27002BF6C6 /* Main.storyboard */,
-				CE51900719A93E27002BF6C6 /* ViewController.h */,
-				CE51900819A93E27002BF6C6 /* ViewController.m */,
+				CE51903219A9ADBD002BF6C6 /* BeaconEngine.h */,
+				CE51903319A9ADBD002BF6C6 /* BeaconEngine.m */,
 				CE51900A19A93E27002BF6C6 /* Images.xcassets */,
 				CE518FF919A93E27002BF6C6 /* Supporting Files */,
 				CE51902F19A945A7002BF6C6 /* TableViewCell.h */,
@@ -350,7 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE51900919A93E27002BF6C6 /* ViewController.m in Sources */,
+				CE51903419A9ADBD002BF6C6 /* BeaconEngine.m in Sources */,
 				CE51903119A945A7002BF6C6 /* TableViewCell.m in Sources */,
 				08B0149119A99F630088F764 /* SessionContainer.m in Sources */,
 				CE51900319A93E27002BF6C6 /* AppDelegate.m in Sources */,

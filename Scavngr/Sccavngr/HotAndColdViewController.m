@@ -70,10 +70,8 @@ static int kStartTime = 3;
     _tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userTapped:)];
     [self.view addGestureRecognizer:_tap];
 
-    // Force a viewDidLoad()
-    _onnoViewController = [[ViewController alloc] init];
-    [_onnoViewController.view setHidden:YES];
-    [self.view addSubview:_onnoViewController.view];
+    _beaconEngine = [[BeaconEngine alloc] init];
+    _beaconEngine.delegate = self;
     
     [self createSession]; 
 }
@@ -133,37 +131,27 @@ static int kStartTime = 3;
 
 - (void)startHotAndColdView
 {
-    [UIView animateWithDuration:0.5 delay:0.5 options:UIViewAnimationOptionCurveEaseOut
-                     animations:^{
-                         _countdownLabel.alpha = 0;
-                     }
-                     completion:^(BOOL finished) {
-                         _countdownTimer = [NSTimer scheduledTimerWithTimeInterval:2.0
-                                                                            target:self
-                                                                          selector:@selector(testAnimateBackground:)
-                                                                          userInfo:nil
-                                                                           repeats:YES];
-                     }];
+    [_beaconEngine setup];
 }
 
-- (void)testAnimateBackground:(id)sender;
-{
+- (void)playerDistanceToBeacon:(int)number withDistance:(PlayerHotAndColdDistance)distance {
     NSString *currentBackgroundColor;
 
-    PlayerHotAndColdDistance distance = arc4random_uniform(PlayerIsColdColdColdCold);
-
+    _countdownLabel.text = [NSString stringWithFormat:@"Beacon %d", number];
     switch (distance) {
-        case PlayerIsNeutral:
-            currentBackgroundColor = @"ffffff";
-            break;
         case PlayerIsCold:
-            currentBackgroundColor = @"83B8EB";
+            currentBackgroundColor = kPlayerIsCold;
             break;
-        case PlayerIsHot:
-            currentBackgroundColor = @"FFA68F";
+        case PlayerIsColdColdColdCold:
+            currentBackgroundColor = kPlayerIsColdColdColdCold;
             break;
+        case PlayerIsHotHotHot:
+            currentBackgroundColor = kPlayerIsHotHotHot;
+            break;
+        case PlayerHasArrived:
+            currentBackgroundColor = kPlayerHasArrived;
         default:
-            currentBackgroundColor = @"000000";
+            currentBackgroundColor = kPlayerIsNeutral;
             break;
     }
 

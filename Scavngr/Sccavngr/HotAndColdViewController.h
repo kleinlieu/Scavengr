@@ -7,31 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewController.h"
+#import "BeaconEngine.h"
 
-typedef NS_ENUM(NSInteger, PlayerHotAndColdDistance) {
-    PlayerHasArrived = 0,
-    PlayerIsHotHotHotHot,
-    PlayerIsHotHotHot,
-    PlayerIsHotHot,
-    PlayerIsHot,
-    PlayerIsNeutral,
-    PlayerIsCold,
-    PlayerIsColdCold,
-    PlayerIsColdColdCold,
-    PlayerIsColdColdColdCold
-};
+@interface HotAndColdViewController : UIViewController <PlayerDistanceDelegate>
 
-@protocol PlayerDistanceDelegate <NSObject>
-
-- (void)playerDistanceToBeacon:(PlayerHotAndColdDistance)distance;
-
-@end
-
-@interface HotAndColdViewController : UIViewController
-
-@property id<PlayerDistanceDelegate> delegate;
-@property (strong, nonatomic) ViewController *onnoViewController;
+@property (strong, nonatomic) BeaconEngine *beaconEngine;
 
 - (void)startGame;
 

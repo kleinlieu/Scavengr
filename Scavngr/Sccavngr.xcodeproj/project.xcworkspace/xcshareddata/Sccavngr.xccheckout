@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5140CD83-E5E3-475B-BD1B-EC977E197E22</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Sccavngr</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4BB5BFB3-605C-48EE-BE19-3AAACD8E7AF2</key>
+		<string>https://github.com/kleinlieu/Scavengr.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Scavngr/Sccavngr.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4BB5BFB3-605C-48EE-BE19-3AAACD8E7AF2</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kleinlieu/Scavengr.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4BB5BFB3-605C-48EE-BE19-3AAACD8E7AF2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4BB5BFB3-605C-48EE-BE19-3AAACD8E7AF2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Scavengr</string>
+		</dict>
+	</array>
+</dict>
+</plist>

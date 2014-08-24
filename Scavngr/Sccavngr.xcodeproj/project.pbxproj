@@ -49,6 +49,13 @@
 		CE51905419A9B6D7002BF6C6 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51904419A9B6D7002BF6C6 /* iTunesArtwork.png */; };
 		CE51905519A9B6D7002BF6C6 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51904519A9B6D7002BF6C6 /* iTunesArtwork@2x.png */; };
 		CE51905719A9B7D9002BF6C6 /* AppIcon120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = CE51905619A9B7D9002BF6C6 /* AppIcon120x120.png */; };
+		D70D23D019A9A4600072127F /* ProgressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70D23C519A9A4600072127F /* ProgressVC.m */; };
+		D70D23D119A9A4600072127F /* ProgressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D70D23C619A9A4600072127F /* ProgressCell.m */; };
+		D70D23D219A9A4600072127F /* ProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70D23C719A9A4600072127F /* ProgressCell.xib */; };
+		D70D23D319A9A4600072127F /* ProgressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70D23C819A9A4600072127F /* ProgressVC.xib */; };
+		D70D23D419A9A4600072127F /* ProgressUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = D70D23CA19A9A4600072127F /* ProgressUpdate.m */; };
+		D70D23D519A9A4600072127F /* ProgressHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70D23CC19A9A4600072127F /* ProgressHeaderView.xib */; };
+		D70D23D619A9A4600072127F /* ProgressHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D70D23CE19A9A4600072127F /* ProgressHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +122,17 @@
 		CE51904419A9B6D7002BF6C6 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		CE51904519A9B6D7002BF6C6 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		CE51905619A9B7D9002BF6C6 /* AppIcon120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon120x120.png; sourceTree = "<group>"; };
+		D70D23C519A9A4600072127F /* ProgressVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressVC.m; sourceTree = "<group>"; };
+		D70D23C619A9A4600072127F /* ProgressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressCell.m; sourceTree = "<group>"; };
+		D70D23C719A9A4600072127F /* ProgressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressCell.xib; sourceTree = "<group>"; };
+		D70D23C819A9A4600072127F /* ProgressVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressVC.xib; sourceTree = "<group>"; };
+		D70D23C919A9A4600072127F /* ProgressVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressVC.h; sourceTree = "<group>"; };
+		D70D23CA19A9A4600072127F /* ProgressUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressUpdate.m; sourceTree = "<group>"; };
+		D70D23CB19A9A4600072127F /* ProgressUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressUpdate.h; sourceTree = "<group>"; };
+		D70D23CC19A9A4600072127F /* ProgressHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressHeaderView.xib; sourceTree = "<group>"; };
+		D70D23CD19A9A4600072127F /* ProgressHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHeaderView.h; sourceTree = "<group>"; };
+		D70D23CE19A9A4600072127F /* ProgressHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHeaderView.m; sourceTree = "<group>"; };
+		D70D23CF19A9A4600072127F /* ProgressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressCell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +218,17 @@
 		CE518FF819A93E27002BF6C6 /* Sccavngr */ = {
 			isa = PBXGroup;
 			children = (
+				D70D23C519A9A4600072127F /* ProgressVC.m */,
+				D70D23C619A9A4600072127F /* ProgressCell.m */,
+				D70D23C719A9A4600072127F /* ProgressCell.xib */,
+				D70D23C819A9A4600072127F /* ProgressVC.xib */,
+				D70D23C919A9A4600072127F /* ProgressVC.h */,
+				D70D23CA19A9A4600072127F /* ProgressUpdate.m */,
+				D70D23CB19A9A4600072127F /* ProgressUpdate.h */,
+				D70D23CC19A9A4600072127F /* ProgressHeaderView.xib */,
+				D70D23CD19A9A4600072127F /* ProgressHeaderView.h */,
+				D70D23CE19A9A4600072127F /* ProgressHeaderView.m */,
+				D70D23CF19A9A4600072127F /* ProgressCell.h */,
 				08B0148A19A99F090088F764 /* Models */,
 				CE51900119A93E27002BF6C6 /* AppDelegate.h */,
 				CE51900219A93E27002BF6C6 /* AppDelegate.m */,
@@ -363,6 +392,10 @@
 				CE518FFD19A93E27002BF6C6 /* InfoPlist.strings in Resources */,
 				CE51905419A9B6D7002BF6C6 /* iTunesArtwork.png in Resources */,
 				CE51904B19A9B6D7002BF6C6 /* AppIcon50x50@2x.png in Resources */,
+				D70D23D319A9A4600072127F /* ProgressVC.xib in Resources */,
+				D70D23D519A9A4600072127F /* ProgressHeaderView.xib in Resources */,
+				CE518FFD19A93E27002BF6C6 /* InfoPlist.strings in Resources */,
+				D70D23D219A9A4600072127F /* ProgressCell.xib in Resources */,
 				CE51900619A93E27002BF6C6 /* Main.storyboard in Resources */,
 				CE51904C19A9B6D7002BF6C6 /* AppIcon57x57.png in Resources */,
 				CE51904619A9B6D7002BF6C6 /* AppIcon29x29.png in Resources */,
@@ -432,8 +465,12 @@
 				CE51900319A93E27002BF6C6 /* AppDelegate.m in Sources */,
 				08B0149619A99FC90088F764 /* HotAndColdViewController.m in Sources */,
 				08B0149219A99F630088F764 /* ProgressObserver.m in Sources */,
+				D70D23D419A9A4600072127F /* ProgressUpdate.m in Sources */,
+				D70D23D119A9A4600072127F /* ProgressCell.m in Sources */,
+				D70D23D619A9A4600072127F /* ProgressHeaderView.m in Sources */,
 				CE518FFF19A93E27002BF6C6 /* main.m in Sources */,
 				08B0149319A99F630088F764 /* Transcript.m in Sources */,
+				D70D23D019A9A4600072127F /* ProgressVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

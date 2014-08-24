@@ -70,6 +70,11 @@ static int kStartTime = 3;
     _tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userTapped:)];
     [self.view addGestureRecognizer:_tap];
 
+    // Force a viewDidLoad()
+    _onnoViewController = [[ViewController alloc] init];
+    [_onnoViewController.view setHidden:YES];
+    [self.view addSubview:_onnoViewController.view];
+    
     [self createSession]; 
 }
 

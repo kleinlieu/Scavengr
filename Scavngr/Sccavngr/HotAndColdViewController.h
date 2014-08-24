@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
 
 typedef NS_ENUM(NSInteger, PlayerHotAndColdDistance) {
     PlayerHasArrived = 0,
@@ -30,6 +31,7 @@ typedef NS_ENUM(NSInteger, PlayerHotAndColdDistance) {
 @interface HotAndColdViewController : UIViewController
 
 @property id<PlayerDistanceDelegate> delegate;
+@property (strong, nonatomic) ViewController *onnoViewController;
 
 - (void)startGame;
 
